@@ -78,6 +78,12 @@ def gameOver(board):
     if board[0][2]==board[1][1]==board[2][0] and board[0][2]!=None:
             print(board[0][2]," player won")
             return 1
+    for row in range(3):
+        for col in range(3):
+            if board[row][col] == None:
+                return 0
+    print("A tie")
+    exit()
             
 
 pygame.init()
